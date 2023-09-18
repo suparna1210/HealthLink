@@ -1,4 +1,4 @@
-# Create IoT App Service to store and Plot Medical Data (Team 5)
+# HealthLink
 Group Member:
 
 Suparna Srinivasan,
@@ -127,6 +127,66 @@ Solder sensors
 Connect sensors with jumper wires, PCB mounts and Breadboard.
 
 Write python scripts for sensors to generate input/output relationship and log data in real time to MongoDB atlas 
+
+# Python
+
+## Features:
+
+1. **Dataset Generation** - Randomly generates a dataset of 10,000 entries for body temperature, heart rate, and SPO2 levels.
+2. **Data Labelling** - Labels each data entry as "Healthy" or "Unhealthy" based on predefined health criteria.
+3. **Data Exploration** - Visualizes the distribution of the labeled data.
+4. **Training and Testing** - Uses Logistic Regression, Decision Tree, and Multinomial Naive Bayes classifiers to predict health status and evaluates their performance.
+
+## Dependencies:
+
+- Pandas
+- Numpy
+- Seaborn
+- Matplotlib
+- Scikit-learn
+- Mlxtend
+
+## Quickstart:
+
+1. **Setup Virtual Environment** (Recommended)
+```bash
+python3 -m venv env
+source env/bin/activate  # On Windows use `env\Scripts\activate`
+```
+
+2. **Install Dependencies**
+```bash
+pip install -r requirements.txt
+```
+
+3. **Run the Application**
+```bash
+python main.py
+```
+
+## Dataset:
+
+The dataset consists of the following columns:
+- `BodyTemp`: Body temperature in degrees Celsius.
+- `HeartRate`: Heart rate in beats per minute.
+- `SPO2`: Oxygen saturation level in percentage.
+- `HealthStatusCode`: Indicates health status. 0 for "Healthy" and 1 for "Unhealthy".
+
+## Models:
+
+1. **Logistic Regression**: Trained using a pipeline with hyperparameter tuning through GridSearchCV.
+2. **Decision Tree Classifier**: Trained using a pipeline with hyperparameter tuning for max depth, min samples leaf, and min impurity decrease.
+3. **Multinomial Naive Bayes**: Trained using a pipeline with hyperparameter tuning for alpha.
+
+## Model Evaluation:
+
+Performance metrics include:
+- Accuracy
+- Precision (weighted)
+- Recall (weighted)
+- F1 Score (weighted)
+- Confusion Matrix
+
 
 # Links 
 
