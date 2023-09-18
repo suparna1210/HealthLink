@@ -1,5 +1,5 @@
 # HealthLink
-Group Member:
+Group Members:
 
 Suparna Srinivasan,
 
